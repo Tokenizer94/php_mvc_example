@@ -3,13 +3,15 @@ class Pages extends Controller
 {
   public function __construct()
   {
+    $this->usermodel = $this->model('User');
   }
 
   public function index()
   {
+    $users = $this->usermodel->getUsers();
     $data = [
       'title' => 'Home page',
-      'name' => 'Mostafa'
+      'users' => $users,
     ];
     $this->view('pages/index', $data);
   }
