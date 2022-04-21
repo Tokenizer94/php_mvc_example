@@ -1,2 +1,2 @@
-<?php
-echo $data['name'];
+<?php 
+echo APPROOT;
